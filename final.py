@@ -27,6 +27,6 @@ def hello():
         image = top1['image']
     except:
         output = 'failed'
-    return render_template('template.html',t = title,d=descrip,u=url,i=image)
+    return render_template('template.html',t = title,d=descrip,u=url,i=image,dat=data)
 
 
