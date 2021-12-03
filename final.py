@@ -37,15 +37,20 @@ def hello():
     try:
         loc = requests.get('http://ip-api.com/json/') #documentation here: https://ip-api.com/docs
         loc_data = loc.json()
+        city_weather = loc_data['city']
         if city=="United States": #default
             r = requests.get('https://gnews.io/api/v4/top-headlines?lang=en&topic=nation&country=us&token='+api_key+'')
+            url = 'http://api.openweathermap.org/data/2.5/weather?q='+city_weather+'&units=imperial&appid=271d1234d3f497eed5b1d80a07b3fcd1'
+            w = requests.get(url)
+            w_data = w.json()
         else: #search term
             r = requests.get('https://gnews.io/api/v4/search?q='+city+'&lang=en&country=us&token='+api_key+'')
+            w_data = requests.get('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial&appid=271d1234d3f497eed5b1d80a07b3fcd1').json()
         data = r.json()
         
     except:
         output = 'failed'
-    return render_template('template.html',data=data,form=form,cit=city,loc_data=loc_data)
+    return render_template('template.html',data=data,form=form,cit=city,loc_data=loc_data,w_data=w_data)
 
 #<center>
 #<div>
