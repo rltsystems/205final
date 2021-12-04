@@ -22,7 +22,8 @@ app.config['SECRET_KEY'] = SECRET_KEY
 
 key1 = '2751705df8c40b34efbd798cf7bdf9b6' 
 key2 = '0d1d9d2ae255bb02b8d7fb4c90879192'
-keys = [key1,key2] #two API keys 
+key3 = '400fd856dc9ba0c37b98e7463c2dd433'
+keys = [key1,key2,key3] #three API keys 
 
 API_KEY = 'AIzaSyBliiCLzc0cqvJ-uqc6yf9OFrf4jg0Oyk0'
 
@@ -38,7 +39,7 @@ def hello():
         city = form.name.data
         city = " ".join(city.split()) #strip lead and trailing spaces
 
-    api_key = keys[random.randint(0,1)] #randomly pick an api key
+    api_key = keys[random.randint(0,2)] #randomly pick an api key
     try:
         loc = requests.get('http://ip-api.com/json/') #documentation here: https://ip-api.com/docs
         loc_data = loc.json()
@@ -60,6 +61,10 @@ def hello():
         print(longitude)
     except:
         output = 'failed'
+    try:
+        test = data['articles']
+    except:
+        return ('we seem to be encountering an error please try again')
     return render_template('template.html',data=data,form=form,cit=city,loc_data=loc_data,w_data=w_data,longitude=longitude,latitude = latitude)
 
 def getLong(address):
