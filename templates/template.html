@@ -1,6 +1,12 @@
 {{ bootstrap.load_css() }}
 {{ bootstrap.load_js() }}
-
+<html>  
+<head>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+</head>
+</html>
 <center>
 <div>
 <form method="POST" action="/">
@@ -10,6 +16,38 @@
 </form>
 </div>
 </center>
+
+<body style='margin: 0'>
+  <div style="width: 50%; height: 50%" id="mapContainer"></div>
+  
+  <script>	
+        // Initialize the platform object:
+        var platform = new H.service.Platform({
+          'apikey': 'p0HEnb9-S75OeHKwIQa2Py9KIg2EIXjaM0SUQKiZzhg'
+        });
+      
+       var lat = {{latitude}}
+       var long = {{longitude}}
+    
+    // Obtain the default map types from the platform object
+        var maptypes = platform.createDefaultLayers();
+  
+        // Instantiate (and display) a map object:
+        var map = new H.Map(
+          document.getElementById('mapContainer'),
+          maptypes.vector.normal.map,
+          {
+            zoom: 10,
+            center: { lat: lat, lng: long }  
+          });
+      
+    var marker = new H.map.Marker({ lat: lat, lng: long });
+      
+    // Add the marker to the map:
+    map.addObject(marker);
+      
+  </script>
+  </body>
 
 <p>{{w_data['name']}}</p>
 <p>Current Temperature: {{w_data['main']['temp']}}</p>
