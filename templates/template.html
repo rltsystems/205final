@@ -17,7 +17,7 @@
 </div>
 </center>
 
-<body style='margin: 0'>
+<!--<body style='margin: 0'>
   <div style="width: 50%; height: 50%" id="mapContainer"></div>
   
   <script>	
@@ -47,8 +47,9 @@
     map.addObject(marker);
       
   </script>
-  </body>
+  </body> -->
 
+<<<<<<< HEAD
   <div class="text-center">
     <p>{{w_data['name']}}</p>
     <p>Current Temperature: {{w_data['main']['temp']}} "F"</p>
@@ -58,6 +59,16 @@
     <p>Conditons: {{w_data['weather'][0]['description']}}</p>
     <img src="http://openweathermap.org/img/w/{{w_data['weather'][0]['icon']}}.png">
   </div>
+=======
+<div class="text-center">
+<p>{{w_data['name']}}</p>
+<p>Current Temperature: {{w_data['main']['temp']}}</p>
+<p>Feels Like: {{w_data['main']['feels_like']}}</p>
+<p>High: {{w_data['main']['temp_max']}} Low: {{w_data['main']['temp_min']}}</p>
+<p>Conditons: {{w_data['weather'][0]['description']}}</p>
+<img src="http://openweathermap.org/img/w/{{w_data['weather'][0]['icon']}}.png">
+</div>
+>>>>>>> d64f8f94e796c7ae009a6308954c5a58afed7031
 
 <div class="mx-auto" style="width: 1200px;">
 <div class="row">
