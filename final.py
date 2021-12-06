@@ -8,6 +8,7 @@ import random
 from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms.validators import DataRequired
+from wtforms.validators import ValidationError
 
 from geopy.geocoders import Nominatim
 
@@ -27,9 +28,15 @@ keys = [key1,key2,key3] #three API keys
 
 API_KEY = 'AIzaSyBliiCLzc0cqvJ-uqc6yf9OFrf4jg0Oyk0'
 
+def validator(self, cityname):
+        excluded_chars = ","
+        for char in self.name.data:
+            print(char)
+            if char in excluded_chars:
+                raise ValidationError('please remove comma')
 
 class Location(FlaskForm):
-    name = StringField('City', validators=[DataRequired()])
+    name = StringField('City', validators=[DataRequired(),validator])
 
 @app.route('/',methods=('GET', 'POST'))
 def hello():        
