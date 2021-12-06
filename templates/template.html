@@ -49,13 +49,15 @@
   </script>
   </body>
 
-<p>{{w_data['name']}}</p>
-<p>Current Temperature: {{w_data['main']['temp']}}</p>
-<p>Feels Like: {{w_data['main']['feels_like']}}</p>
-<p>High: {{w_data['main']['temp_max']}}</p>
-<p>Low: {{w_data['main']['temp_min']}}</p>
-<p>Conditons: {{w_data['weather'][0]['description']}}</p>
-<img src="http://openweathermap.org/img/w/{{w_data['weather'][0]['icon']}}.png">
+  <div class="text-center">
+    <p>{{w_data['name']}}</p>
+    <p>Current Temperature: {{w_data['main']['temp']}} "F"</p>
+    <p>Feels Like: {{w_data['main']['feels_like']}} "F"</p>
+    <p>High: {{w_data['main']['temp_max']}}</p>
+    <p>Low: {{w_data['main']['temp_min']}}</p>
+    <p>Conditons: {{w_data['weather'][0]['description']}}</p>
+    <img src="http://openweathermap.org/img/w/{{w_data['weather'][0]['icon']}}.png">
+  </div>
 
 <div class="mx-auto" style="width: 1200px;">
 <div class="row">
