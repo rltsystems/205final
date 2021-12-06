@@ -61,9 +61,15 @@ def hello():
             w_data['main']['feels_like'] = round(w_data['main']['feels_like'])
             w_data['main']['temp_max']=round(w_data['main']['temp_max'])
             w_data['main']['temp_min'] = round(w_data['main']['temp_min'])
+            city_id = w_data['sys']['id']
         else: #search term
             r = requests.get('https://gnews.io/api/v4/search?q='+city+'&lang=en&country=us&token='+api_key+'')
             w_data = requests.get('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial&appid=271d1234d3f497eed5b1d80a07b3fcd1').json()
+            w_data['main']['temp'] = round(w_data['main']['temp'])
+            w_data['main']['feels_like'] = round(w_data['main']['feels_like'])
+            w_data['main']['temp_max']=round(w_data['main']['temp_max'])
+            w_data['main']['temp_min'] = round(w_data['main']['temp_min'])
+            city_id = w_data['sys']['id']
         data = r.json()
 
         longitude = getLong(city)
