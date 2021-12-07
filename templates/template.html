@@ -17,8 +17,7 @@
 </div>
 </center>
 
-
-
+<div style="padding-right: 550px; float: left;">
 <div class="text-center">
 <p>{{w_data['name']}}</p>
 <p>Current Temperature: {{w_data['main']['temp']}} F°</p>
@@ -27,15 +26,12 @@
 <p>Conditons: {{w_data['weather'][0]['description']}}</p>
 <img src="http://openweathermap.org/img/w/{{w_data['weather'][0]['icon']}}.png">
 </div>
-
-<div class = "text-center">
-<p>this is optional but it looks nicer than plain text</p>
 </div>
-<div id="openweathermap-widget-11"></div>
-<script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: {{w_data['id']}},appid: '271d1234d3f497eed5b1d80a07b3fcd1',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+</div>
 
+<div style="float: left">
 <p class="font-weight-bold" style = "margin-left: 1.4em" >News and Headlines</p>
-<div class="mx-auto" style="width: 1200px;">
+<div class="mx-auto" style="width: 900px;">
 <div class="row">
 <div class="col">
     <div class="card shadow-sm">
@@ -66,15 +62,31 @@
       </div>
     </div>
   </div>
+
+    <div class="row">
+    <div class="col">
+        <div class="card shadow-sm">
+            <img src={{data['articles'][2]['image']}} width="100%", height=255>
+    
+          <div class="card-body">
+            <p class="font-weight-bold">{{data['articles'][0]['title']}}</p>
+            <p class="card-text">{{data['articles'][0]['description']}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href={{data['articles'][2]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
+              <small class="text-muted">{{data['articles'][0]['source']['name']}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
   <div class="col">
     <div class="card shadow-sm">
-        <img src={{data['articles'][2]['image']}} width="100%", height=255>
+        <img src={{data['articles'][3]['image']}} width="100%", height=255>
 
       <div class="card-body">
         <p class="font-weight-bold">{{data['articles'][2]['title']}}</p>
         <p class="card-text">{{data['articles'][2]['description']}}</p>
         <div class="d-flex justify-content-between align-items-center">
-            <a href={{data['articles'][2]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
+            <a href={{data['articles'][3]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
           <small class="text-muted">{{data['articles'][2]['source']['name']}}</small>
         </div>
       </div>
@@ -85,13 +97,13 @@
 <div class="row">
     <div class="col">
         <div class="card shadow-sm">
-            <img src={{data['articles'][3]['image']}} width="100%", height=255>
+            <img src={{data['articles'][4]['image']}} width="100%", height=255>
     
           <div class="card-body">
             <p class="font-weight-bold">{{data['articles'][3]['title']}}</p>
             <p class="card-text">{{data['articles'][3]['description']}}</p>
             <div class="d-flex justify-content-between align-items-center">
-                <a href={{data['articles'][3]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
+                <a href={{data['articles'][4]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
               <small class="text-muted">{{data['articles'][3]['source']['name']}}</small>
             </div>
           </div>
@@ -100,31 +112,48 @@
     
       <div class="col">
         <div class="card shadow-sm">
-            <img src={{data['articles'][4]['image']}} width="100%", height=255>
+            <img src={{data['articles'][5]['image']}} width="100%", height=255>
     
           <div class="card-body">
             <p class="font-weight-bold">{{data['articles'][4]['title']}}</p>
             <p class="card-text">{{data['articles'][4]['description']}}</p>
             <div class="d-flex justify-content-between align-items-center">
-                <a href={{data['articles'][4]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
+                <a href={{data['articles'][5]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
               <small class="text-muted">{{data['articles'][4]['source']['name']}}</small>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src={{data['articles'][5]['image']}} width="100%", height=255>
-    
-          <div class="card-body">
-            <p class="font-weight-bold">{{data['articles'][5]['title']}}</p>
-            <p class="card-text">{{data['articles'][5]['description']}}</p>
-            <div class="d-flex justify-content-between align-items-center">
-                <a href={{data['articles'][5]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
-              <small class="text-muted">{{data['articles'][5]['source']['name']}}</small>
+      <div class="row">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src={{data['articles'][6]['image']}} width="100%", height=255>
+        
+              <div class="card-body">
+                <p class="font-weight-bold">{{data['articles'][3]['title']}}</p>
+                <p class="card-text">{{data['articles'][3]['description']}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href={{data['articles'][6]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
+                  <small class="text-muted">{{data['articles'][3]['source']['name']}}</small>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+          <div class="col">
+            <div class="card shadow-sm">
+                <img src={{data['articles'][7]['image']}} width="100%", height=255>
+        
+              <div class="card-body">
+                <p class="font-weight-bold">{{data['articles'][4]['title']}}</p>
+                <p class="card-text">{{data['articles'][4]['description']}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href={{data['articles'][7]['url']}} type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View</a>
+                  <small class="text-muted">{{data['articles'][4]['source']['name']}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
+</div>
+</div>
 </div>
