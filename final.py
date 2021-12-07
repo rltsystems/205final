@@ -30,7 +30,7 @@ API_KEY = 'AIzaSyBliiCLzc0cqvJ-uqc6yf9OFrf4jg0Oyk0'
 def validator(self, cityname):
         excluded_chars = ","
         for char in self.name.data:
-            print(char)
+            #print(char)
             if char in excluded_chars:
                 raise ValidationError('please remove comma')
 
