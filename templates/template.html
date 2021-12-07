@@ -17,20 +17,18 @@
 </div>
 </center>
 
-<div style="padding-right: 550px; float: left;">
-<div class="text-center">
-<p>{{w_data['name']}}</p>
-<p>Current Temperature: {{w_data['main']['temp']}} F°</p>
-<p>Feels Like: {{w_data['main']['feels_like']}} F°</p>
-<p>High: {{w_data['main']['temp_max']}} F° Low: {{w_data['main']['temp_min']}} F°</p>
-<p>Conditons: {{w_data['weather'][0]['description']}}</p>
+<div>
+<div style="padding-left: 100px; display: inline-block;">
+<p style="font-size: 30px">{{w_data['name']}}</p>
+<p style="font-size: 30px"> <strong>Current Temperature: </strong>{{w_data['main']['temp']}} F°</p>
+<p style="font-size: 30px"> <strong>Feels Like: </strong>{{w_data['main']['feels_like']}} F°</p>
+<p style="font-size: 30px"> <strong>High: </strong> {{w_data['main']['temp_max']}} F° <strong>Low: </strong>{{w_data['main']['temp_min']}} F°</p>
+<p style="font-size: 30px"> <strong>Conditons: </strong>{{w_data['weather'][0]['description']}}</p>
 <img src="http://openweathermap.org/img/w/{{w_data['weather'][0]['icon']}}.png">
 </div>
-</div>
-</div>
 
-<div style="float: left">
-<p class="font-weight-bold" style = "margin-left: 1.4em" >News and Headlines</p>
+<div style="padding-left: 200px; display: inline-block;">
+<p class="font-weight-bold" style = "font-size: 30px; margin-left: 37%" >News and Headlines</p>
 <div class="mx-auto" style="width: 900px;">
 <div class="row">
 <div class="col">
@@ -154,6 +152,8 @@
             </div>
           </div>
     </div>
+</div>
+</div>
 </div>
 </div>
 </div>

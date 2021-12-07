@@ -24,6 +24,7 @@ app.config['SECRET_KEY'] = SECRET_KEY
 key1 = '2751705df8c40b34efbd798cf7bdf9b6' 
 key2 = '0d1d9d2ae255bb02b8d7fb4c90879192'
 key3 = '400fd856dc9ba0c37b98e7463c2dd433'
+
 keys = [key1,key2,key3] #three API keys 
 
 API_KEY = 'AIzaSyBliiCLzc0cqvJ-uqc6yf9OFrf4jg0Oyk0'
