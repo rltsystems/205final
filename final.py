@@ -10,8 +10,6 @@ from wtforms import StringField
 from wtforms.validators import DataRequired
 from wtforms.validators import ValidationError
 
-from geopy.geocoders import Nominatim
-
 # create an instance of Flask
 app = Flask(__name__) 
 bootstrap = Bootstrap(app)
@@ -32,7 +30,7 @@ API_KEY = 'AIzaSyBliiCLzc0cqvJ-uqc6yf9OFrf4jg0Oyk0'
 def validator(self, cityname):
         excluded_chars = ","
         for char in self.name.data:
-            print(char)
+            #print(char)
             if char in excluded_chars:
                 raise ValidationError('please remove comma')
 
@@ -73,61 +71,10 @@ def hello():
             city_id = w_data['sys']['id']
         data = r.json()
 
-        longitude = getLong(city)
-        latitude = getLat(city)
-        print(latitude)
-        print(longitude)
     except:
         output = 'failed'
     try:
         test = data['articles']
     except:
         return ('we seem to be encountering an error please try again')
-    return render_template('template.html',data=data,form=form,cit=city,loc_data=loc_data,w_data=w_data,longitude=longitude,latitude = latitude)
-
-def getLong(address):
-    params = {
-        'key': API_KEY,
-        'address': address.replace(' ', '+')
-    }
-    base_url = 'https://maps.googleapis.com/maps/api/geocode/json?'
-    response = requests.get(base_url, params=params)
-    data = response.json()
-    if data['status'] == 'OK':
-        result = data['results'][0]
-        location = result['geometry']['location']
-        return location['lng']
-    else:
-        return
-        
-def getLat(address):
-    params = {
-        'key': API_KEY,
-        'address': address.replace(' ', '+')
-    }
-
-    base_url = 'https://maps.googleapis.com/maps/api/geocode/json?'
-    response = requests.get(base_url, params=params)
-    data = response.json()
-    if data['status'] == 'OK':
-        result = data['results'][0]
-        location = result['geometry']['location']
-        return location['lat']
-    else:
-        return
-
-#<center>
-#<div>
-#<form method="POST" action="/">
-#    {{ form.csrf_token }}
-#    {{ form.name.label }} {{ form.name(size=20) }}
-#    <input type="submit" value="Go">
-#</form>
-#</div>
-#</center>
-
-  
-#<img src={{data['articles'][1]['image']}} width="250">
-#<p>{{data['articles'][1]['title']}}</p>
-#<p>{{data['articles'][1]['description']}}</p>
-#<p>{{data['articles'][1]['url']}}</p>
+    return render_template('template.html',data=data,form=form,cit=city,loc_data=loc_data,w_data=w_data)
