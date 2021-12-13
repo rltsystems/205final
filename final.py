@@ -78,5 +78,4 @@ def hello():
     return render_template('template.html',data=data,form=form,cit=city,loc_data=loc_data,w_data=w_data)
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True, use_reloader=True)
