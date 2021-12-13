@@ -1,1 +1,1 @@
-"web: gunicorn --bind 0.0.0.0:$PORT weather205app:app" 
+web: gunicorn app:app
