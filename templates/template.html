@@ -9,6 +9,7 @@
 </html>
 <center>
 <div>
+<p class="font-weight-bold" style="font-size: 30px;"> Weather News App</p>
 <form method="POST" action="/">
     {{ form.csrf_token }}
     {{ form.name.label }} {{ form.name(size=20) }}
@@ -18,7 +19,8 @@
 </center>
 
 <div>
-<div style="padding-left: 100px; display: inline-block;">
+<div style="padding-left: 100px; display: inline-block; vertical-align: middle;">
+<p style="font-size: 30px;"> <strong> Weather </strong> </p>
 <p style="font-size: 30px">{{w_data['name']}}</p>
 <p style="font-size: 30px"> <strong>Current Temperature: </strong>{{w_data['main']['temp']}} F°</p>
 <p style="font-size: 30px"> <strong>Feels Like: </strong>{{w_data['main']['feels_like']}} F°</p>
