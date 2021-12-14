@@ -2,8 +2,11 @@
 
 # Team Members
 Dante Moon
+
 Karandeep Singh
+
 Oscar Lara
+
 Ryan Trinh
 
 # CST 205
