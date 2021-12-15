@@ -1,5 +1,5 @@
 # Weather and News App
-![](https://github.com/dantemoon1/205final/blob/main/preview.png)
+<img width="1656" alt="Screen Shot 2021-12-15 at 12 17 51 AM" src="https://user-images.githubusercontent.com/54912970/146150286-3ddc9750-f2ea-4d1c-aa29-50203a9d9184.png">
 
 This app was created for a user to be able to grab weather and top trending news articles by searching with a city name.
 It utilizes Python Flask as well as a responsive bootstrap-flask framework, and is powered by the Openweather and GNews API.
@@ -9,8 +9,11 @@ To make it easier for the end user to run the app, we linked the github repo to 
 
 # Team Members
 Dante Moon
+
 Karandeep Singh
+
 Oscar Lara
+
 Ryan Trinh
 
 # CST 205
@@ -21,4 +24,7 @@ Click on the link to navigate to the app -->
 # Link to Github Repositary
 https://github.com/dantemoon1/205final
 # Future Work
+Adding a hourly and daily forecast
+
+Weather alerts
 
