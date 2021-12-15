@@ -6,7 +6,7 @@ It utilizes Python Flask as well as a responsive bootstrap-flask framework, and 
 [OpenWeatherMap API](https://openweathermap.org/api)
 [GNews API](https://gnews.io/)
 To make it easier for the end user to run the app, we linked the github repo to heroku cloud and deployed it live (hosted on Heroku's free tier).
-
+![](https://github.com/dantemoon1/205final/blob/main/heroku.JPG)
 # Team Members
 Dante Moon
 
