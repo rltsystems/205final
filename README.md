@@ -16,7 +16,7 @@ Ryan Trinh
 # CST 205
 # 12/13/21
 # How To Run Program
-Navigate to the link below and see live site/app
+Click on the link to navigate to the app -->
 [Weather and News App](https://weather205app.herokuapp.com/)
 # Link to Github Repositary
 https://github.com/dantemoon1/205final
