@@ -21,7 +21,7 @@ Ryan Trinh
 # How To Run Program
 Click on the link to navigate to the app -->
 [Weather and News App](https://weather205app.herokuapp.com/)
-# Link to Github Repositary
+# Link to Github Repository
 https://github.com/dantemoon1/205final
 # Future Work
 Adding a hourly and daily forecast
