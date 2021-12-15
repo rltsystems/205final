@@ -1,5 +1,5 @@
 # Weather and News App
-![](https://github.com/dantemoon1/205final/blob/main/preview.png|width=100)
+![](https://github.com/dantemoon1/205final/blob/main/preview.png)
 
 This app was created for a user to be able to grab weather and top trending news articles by searching with a city name.
 It utilizes Python Flask as well as a responsive bootstrap-flask framework, and is powered by the Openweather and GNews API.
