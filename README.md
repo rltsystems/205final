@@ -21,10 +21,22 @@ Ryan Trinh
 # How To Run Program
 Click on the link to navigate to the app -->
 [Weather and News App](https://weather205app.herokuapp.com/)
+
+If running locally please follow normal procedure for any flask app but also have the following additional packes installed:
+* Bootstrap-Flask
+* Flask-WTF
+* Flask
+* Jinja2
+
+Full list of requirements available in requirements.txt if you encounter any issues.
 # Link to Github Repository
 https://github.com/dantemoon1/205final
 # Future Work
 Adding a hourly and daily forecast
+
+Improve input validation (currently only supports searching for a city, not city comma state)
+
+Improve location detection
 
 Weather alerts
 
